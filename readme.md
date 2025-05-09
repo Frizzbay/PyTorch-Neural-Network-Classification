@@ -35,6 +35,34 @@ Started simple and built up complexity:
 3. Added non-linear ReLU → worked effectively
 4. Extended to multi-class → worked with same pattern
 
+## Results Visualization
+
+### Dataset Visualization
+The experiments use two main datasets:
+
+![Circle Dataset](images/circle_dataset.png)
+*Binary classification dataset created with scikit-learn's make_circles function. The task is to separate the inner blue points from the outer red points with a decision boundary.*
+
+![Multi-class Blob Dataset](images/multiclass_blob_dataset.png)
+*Multi-class classification dataset with four distinct clusters created using make_blobs.*
+
+### Model Performance
+
+#### Binary Classification Results
+The impact of non-linearity is clearly demonstrated in the decision boundaries:
+
+![Linear Model Boundary](images/linear_model_boundary.png)
+*Model without non-linearity fails - it can only create a linear decision boundary*
+
+![Non-linear Model Boundary](images/nonlinear_model_boundary.png)
+*Model with ReLU activation functions successfully captures the circular decision boundary*
+
+#### Linear Regression Validation
+Testing models on simple linear regression problems helps validate the architecture:
+
+![Regression Predictions](images/regression_predictions.png)
+*The same neural network architecture can successfully fit linear data*
+
 ## Technologies Used
 
 - PyTorch
@@ -68,6 +96,3 @@ python multiclass_classification.py  # Handles multiple classes
 ```
 
 Look for the generated PNG files to see visualizations of decision boundaries and learning curves.
-
-
-
